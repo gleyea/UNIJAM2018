@@ -24,8 +24,14 @@ public class River : ObjectManager
     {
     }
 
-    public override int activate()
+    public override void activate()
     {
-        return 3;
+        /*
+         * 
+         * 
+         * traverser
+         * 
+         * 
+         */
     }
 }

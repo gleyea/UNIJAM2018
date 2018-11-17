@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Workshop : MonoBehaviour
+public class Workshop : ObjectManager
 {
     [SerializeField]
     Sprite workshopSprite;
@@ -26,15 +26,27 @@ public class Workshop : MonoBehaviour
     {
     }
 
-    public void activate()
+    public override void activate()
     {
         if (nbWood < 6 & GetComponent<Player>().HasWoodLog)
         {
             nbWood++;
+            GetComponent<Player>().HasWoodLog = false;
         }
         if (nbWood == 6)
         {
-            /*construction bateau*/
+            /*
+             * 
+             * 
+             * construction bateau
+             * 
+             * 
+             * 
+             *         
+             */
         }
     }
+
+
+
 }

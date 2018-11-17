@@ -5,6 +5,6 @@ using UnityEngine;
 public abstract class ObjectManager: MonoBehaviour{
 
 
-    public abstract int activate();
+    public abstract void activate();
 
 }
