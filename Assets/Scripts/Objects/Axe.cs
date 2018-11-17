@@ -50,12 +50,7 @@ public class Axe : ObjectManager
             }
             else
             {
-                /*
-                 * 
-                 * 
-                 * 
-                 * 
-                 */
+                audioData.PlayOneShot(audio2, 1);
             }
             isActivated = true;
             player.gameObject.GetComponent<Player>().HasAxe = true;

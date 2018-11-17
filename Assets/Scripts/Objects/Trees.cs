@@ -140,12 +140,7 @@ public class Trees : ObjectManager {
             }
             else
             {
-                /*
-                 * 
-                 * 
-                 * 
-                 * 
-                 */
+                audioData.PlayOneShot(audio2, 1);
             }
             initAge +=1 ;
             player.gameObject.GetComponent<Player>().HasWoodLog = true;
