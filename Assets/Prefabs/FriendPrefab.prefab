@@ -21,9 +21,10 @@ GameObject:
   - component: {fileID: 4036974634273964}
   - component: {fileID: 212509421055270434}
   - component: {fileID: 114431503712511642}
-  - component: {fileID: 61867196905026278}
-  - component: {fileID: 61646726332085804}
-  - component: {fileID: 114262062335889564}
+  - component: {fileID: 61649656928374418}
+  - component: {fileID: 61061126247141190}
+  - component: {fileID: 114529714238630572}
+  - component: {fileID: 114148274253277366}
   m_Layer: 0
   m_Name: FriendPrefab
   m_TagString: Untagged
@@ -44,7 +45,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &61646726332085804
+--- !u!61 &61061126247141190
 BoxCollider2D:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -67,9 +68,9 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.14, y: 3.11}
+  m_Size: {x: 0.31, y: 0.76}
   m_EdgeRadius: 0
---- !u!61 &61867196905026278
+--- !u!61 &61649656928374418
 BoxCollider2D:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -81,7 +82,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.04586792, y: 0.7567549}
+  m_Offset: {x: -0.052646488, y: -0.071444154}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -92,9 +93,9 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 6.3021936, y: 10.292351}
+  m_Size: {x: 1.0799782, y: 1.4575219}
   m_EdgeRadius: 0
---- !u!114 &114262062335889564
+--- !u!114 &114148274253277366
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -102,9 +103,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1827908034816126}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 42b4a45b9bfad7647a007238a70f52d0, type: 3}
+  m_Script: {fileID: 11500000, guid: 485545c826fc67447a5a93e3663ac511, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  streamedTime: 0
 --- !u!114 &114431503712511642
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -120,6 +122,17 @@ MonoBehaviour:
   Friend_1: {fileID: 21300002, guid: 1fbae1624b19e4f5498ba525149d636f, type: 3}
   Friend_2: {fileID: 21300004, guid: 1fbae1624b19e4f5498ba525149d636f, type: 3}
   Friend_3: {fileID: 21300000, guid: d48d6b129b53c43bab57913d524981d2, type: 3}
+--- !u!114 &114529714238630572
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1827908034816126}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42b4a45b9bfad7647a007238a70f52d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212509421055270434
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -154,7 +167,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 40
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 1fbae1624b19e4f5498ba525149d636f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
