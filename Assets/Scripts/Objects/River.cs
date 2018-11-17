@@ -24,8 +24,8 @@ public class River : ObjectManager
     {
     }
 
-    public override bool activate()
+    public override int activate()
     {
-        return true;
+        return 3;
     }
 }

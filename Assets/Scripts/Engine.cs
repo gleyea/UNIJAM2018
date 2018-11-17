@@ -10,6 +10,9 @@ public class Engine : MonoBehaviour {
     private float maxPositionY;
     private float minPositionX;
     private float minPositionY;
+    private bool actionReady;
+    private Collider2D actualCollider;
+    private int collidedObject;
     public Vector3 Position
     {
         get
@@ -74,15 +77,45 @@ public class Engine : MonoBehaviour {
         Position += nextPosition * maxSpeed * Time.deltaTime;
     }
 
-    public void Action()
-    {
-
-    }
 	// Use this for initialization
 	void Start () {
-		
-	}
+
+    }
 	
+    void OnTriggerEnter(Collider2D collider)
+    {
+        actionReady = true;
+        actualCollider = collider;
+    }
+
+    void OnTriggerExit(Collider2D collider)
+    {
+        actionReady = false;
+        actualCollider = null;
+    }
+
+    public void Action()
+    {
+        if (actionReady)
+        {
+            collidedObject = actualCollider.GetComponent<ObjectManager>().activate();
+        }
+        switch(collidedObject)
+        {
+            case 0:
+                break;
+            case 1:
+                GetComponent<Player>().HasAxe = true;
+                break;
+            case 2:
+                GetComponent<Player>().HasWoodLog = true;
+                break;
+            case 3:
+                GetComponent<Player>().HasRaft = true;
+                break;
+
+        }
+    }
 	// Update is called once per frame
 	void Update () {
 		

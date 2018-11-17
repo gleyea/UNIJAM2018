@@ -81,14 +81,14 @@ public class Trees : ObjectManager {
         Debug.Log(age);
     }
 
-    public override bool activate()
+    public override int activate()
     {
         if (age == 2)
         {
             age = 4;
-            return true;
+            return 2;
         }
-        return false;
+        return 2;
     }
 
 }
