@@ -11,14 +11,19 @@ public class TimeStream : MonoBehaviour {
     public static TimeStream Instance {
         get{
             if(instance == null){
-                instance = new TimeStream();
+                Debug.LogError("instance non trouvée");
             }
             return instance;
         }
     }
 
+    private void Awake()
+    {
+
+        instance = gameObject.GetComponent<TimeStream>();
+    }
     [SerializeField]
-    private static int streamedTime = 0;
+    public int streamedTime;
 
     public int getTime(){
         return streamedTime;
