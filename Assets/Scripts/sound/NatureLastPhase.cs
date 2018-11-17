@@ -10,7 +10,6 @@ public class NatureLastPhase : MonoBehaviour
 
     TimeStream timeStream;
     int date;
-    bool isPlaying;
 
 
     // Use this for initialization
@@ -20,17 +19,15 @@ public class NatureLastPhase : MonoBehaviour
         date = timeStream.getTime();
 
         audioData = GetComponent<AudioSource>();
-        isPlaying = false;
     }
 
     // Update is called once per frame
     void Update()
     {
         date = timeStream.getTime();
-        if (date >= 3 & !isPlaying)
+        if (date >= 3 & !audioData.isPlaying)
         {
             audioData.Play();
-            isPlaying = true;
         }
         else if (date <= 2)
         {

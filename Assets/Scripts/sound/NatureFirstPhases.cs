@@ -10,12 +10,10 @@ public class NatureFirstPhases : MonoBehaviour
 
     TimeStream timeStream;
     int date;
-    bool isPlaying;
 
     // Use this for initialization
     void Start()
     {
-        isPlaying = false;
         timeStream = TimeStream.Instance;
         date = timeStream.getTime();
 
@@ -27,10 +25,9 @@ public class NatureFirstPhases : MonoBehaviour
     void Update()
     {
         date = timeStream.getTime();
-        if (date < 3 & !isPlaying )
+        if (date < 3 & !audioData.isPlaying )
         {
             audioData.Play();
-            isPlaying = true;
         }
         else if (date >= 3)
         {
