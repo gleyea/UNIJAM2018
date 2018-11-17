@@ -34,9 +34,13 @@ public class Axe : ObjectManager
         }
     }
 
-    public override bool activate()
+    public override int activate()
     {
-        isActivated = true;
-        return true;
+        if (!isActivated)
+        {
+            isActivated = true;
+            return 1;
+        }
+        return 0;
     }
 }
