@@ -37,23 +37,27 @@ public class Trees : ObjectManager {
         startDate= timeStream.getTime();
         age = initAge;
         
-        spriteRenderer = GetComponent<SpriteRenderer>(); 
+        spriteRenderer = GetComponent<SpriteRenderer>();
         if (spriteRenderer.sprite == null)
+        {
+
             if (age == 0)
             {
                 spriteRenderer.sprite = tree0;
             }
-            else if (age==1) {
+            else if (age == 1)
+            {
                 spriteRenderer.sprite = tree1;
             }
-            else if (age==2)
+            else if (age == 2)
             {
                 spriteRenderer.sprite = tree2;
             }
-             else
+            else
             {
                 spriteRenderer.sprite = tree3;
             }
+        }
     }
 	
 	// Update is called once per frame
