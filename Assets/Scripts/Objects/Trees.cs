@@ -7,7 +7,7 @@ public class Trees : ObjectManager {
     [SerializeField]
     int age;
 
-
+    int startDate;
 
 
     [SerializeField]
