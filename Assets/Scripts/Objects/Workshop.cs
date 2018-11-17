@@ -70,23 +70,16 @@ public class Workshop : ObjectManager
 
     public override void activate()
     {
+        if (nbWood == 5)
+        {
+            nbWood = 0;
+            player.gameObject.GetComponent<Player>().HasRaft = true;
+        }
         if (nbWood < 5 & player.gameObject.GetComponent<Player>().HasWoodLog)
         {
             nbWood++;
             player.gameObject.GetComponent<Player>().HasWoodLog = false;
         }
-        if (nbWood == 5)
-        {
-            nbWood = 0;
-            /*
-             * 
-             * 
-             * construction bateau
-             * 
-             * 
-             * 
-             *         
-             */
-        }
+      
     }
 }

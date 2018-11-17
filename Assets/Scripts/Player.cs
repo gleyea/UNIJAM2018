@@ -88,7 +88,6 @@ public class Player : MonoBehaviour {
     }
     // Use this for initialization
     void Start () {
-        Debug.Log("A");
         woodQuantity = 0;
         hasAxe = false;
         hasWoodLog = false;
