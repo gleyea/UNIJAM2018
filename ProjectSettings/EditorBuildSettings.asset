@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/GameScene_Aymeric.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
+    path: Assets/Scenes/StartMenu.unity
+    guid: 7e6df099c3dd9403a833a3e1351e4d82
+  - enabled: 1
     path: Assets/Scenes/GameScene_Ramina.unity
     guid: 0cbe4ecdb6b66da4fac05b7385cf43d9
   m_configObjects: {}
