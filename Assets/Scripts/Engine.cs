@@ -96,6 +96,7 @@ public class Engine : MonoBehaviour {
 
     public void Action()
     {
+        Debug.Log(actualCollider);
         if (actionReady & actualCollider)
         {
             actualCollider.GetComponent<ObjectManager>().activate();
