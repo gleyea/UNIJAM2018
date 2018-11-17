@@ -464,6 +464,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   riverSprite: {fileID: 0}
+  audioData: {fileID: 82941367144292550}
+  audio: {fileID: 8300000, guid: 9ea8df32ebbba4940bcfaa67f88614f7, type: 3}
 --- !u!212 &212304347626734888
 SpriteRenderer:
   m_ObjectHideFlags: 1
