@@ -5,7 +5,7 @@ using UnityEngine;
 public class Trees : ObjectManager {
 
     [SerializeField]
-    int initAge=0;
+    private int initAge=0;
 
     int startDate;
 
@@ -35,6 +35,29 @@ public class Trees : ObjectManager {
     public AudioClip audio2;
 
 
+    public int InitAge
+    {
+        get
+        {
+            return this.initAge;
+        }
+        set
+        {
+            this.initAge = value;
+        }
+    }
+
+    public Sprite Tree2
+    {
+        get
+        {
+            return this.tree2;
+        }
+        set
+        {
+            this.tree2 = value;
+        }
+    }
     // Use this for initialization
     void Start () {
 
