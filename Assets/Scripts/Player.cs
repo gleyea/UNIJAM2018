@@ -10,6 +10,47 @@ public class Player : MonoBehaviour {
     private bool hasRaft;
     private bool onWater;
     private static Player instance;
+    [SerializeField]
+    Sprite playerSpriteRaft;
+    [SerializeField]
+    Sprite spritePlayer;
+    public Animator animator;
+    private bool onEarth;
+
+    public bool OnEarth
+    {
+        get
+        {
+            return this.onEarth;
+        }
+        set
+        {
+            this.onEarth = value;
+        }
+    }
+    public Sprite PlayerSpriteRaft
+    {
+        get
+        {
+            return this.playerSpriteRaft;
+        }
+        set
+        {
+            this.playerSpriteRaft = value;
+        }
+    }
+
+    public Sprite SpritePlayer
+    {
+        get
+        {
+            return this.spritePlayer;
+        }
+        set
+        {
+            this.spritePlayer = value;
+        }
+    }
 
     private Player() { }
     public static Player Instance
@@ -93,10 +134,22 @@ public class Player : MonoBehaviour {
         hasWoodLog = false;
         hasRaft = false;
         onWater = false;
+        onEarth = true;
 }
 	
 	// Update is called once per frame
 	void Update () {
+        if (onEarth)
+        {
+            animator.SetBool("onWater", false);
 
+            //GetComponent<SpriteRenderer>().sprite = spritePlayer;
+        }
+        if (!onEarth)
+        {
+            animator.SetBool("onWater", true);
+
+            //GetComponent<SpriteRenderer>().sprite = playerSpriteRaft;
+        }
     }
 }
