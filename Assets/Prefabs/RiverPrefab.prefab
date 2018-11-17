@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 114487205699901222}
   - component: {fileID: 212186818585495824}
   m_Layer: 0
-  m_Name: WorkshopPrefab
+  m_Name: RiverPrefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

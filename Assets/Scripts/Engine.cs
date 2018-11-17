@@ -82,13 +82,13 @@ public class Engine : MonoBehaviour {
 
     }
 	
-    void OnTriggerEnter(Collider2D collider)
+    void OnTriggerEnter2D(Collider2D collider)
     {
         actionReady = true;
         actualCollider = collider;
     }
 
-    void OnTriggerExit(Collider2D collider)
+    void OnTriggerExit2D(Collider2D collider)
     {
         actionReady = false;
         actualCollider = null;
