@@ -6,12 +6,16 @@ public class Workshop : ObjectManager
 {
     [SerializeField]
     Sprite workshopSprite;
+    
+
+    int nbWood;
 
     private SpriteRenderer spriteRenderer;
 
     // Use this for initialization
     void Start()
     {
+        nbWood = 0;
         spriteRenderer = GetComponent<SpriteRenderer>();
         if (spriteRenderer.sprite == null)
             spriteRenderer.sprite = workshopSprite;
@@ -22,8 +26,27 @@ public class Workshop : ObjectManager
     {
     }
 
-    public override bool activate()
+    public override void activate()
     {
-        return true;
+        if (nbWood < 6 & GetComponent<Player>().HasWoodLog)
+        {
+            nbWood++;
+            GetComponent<Player>().HasWoodLog = false;
+        }
+        if (nbWood == 6)
+        {
+            /*
+             * 
+             * 
+             * construction bateau
+             * 
+             * 
+             * 
+             *         
+             */
+        }
     }
+
+
+
 }

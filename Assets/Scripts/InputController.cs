@@ -35,5 +35,8 @@ public class InputController : MonoBehaviour {
 
 
         }
+
+        animator.SetFloat("SpeedX", axis.x);
+        animator.SetFloat("SpeedY", axis.y);
     }
 }

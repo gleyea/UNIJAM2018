@@ -7,7 +7,10 @@ public class Axe : ObjectManager
 
 
     [SerializeField]
-    Sprite axeSprite;
+    Sprite axeSprite1;
+
+    [SerializeField]
+    Sprite axeSprite2;
 
     bool isActivated;
     
@@ -19,7 +22,7 @@ public class Axe : ObjectManager
         isActivated = false;
         spriteRenderer = GetComponent<SpriteRenderer>();
         if (spriteRenderer.sprite == null)
-            spriteRenderer.sprite = axeSprite;
+            spriteRenderer.sprite = axeSprite1;
     }
 
     // Update is called once per frame
@@ -27,13 +30,15 @@ public class Axe : ObjectManager
     {
         if (isActivated)
         {
-            Destroy(gameObject);
+            spriteRenderer.sprite = axeSprite2;
         }
     }
 
-    public override bool activate()
+    public override void activate()
     {
-        isActivated = true;
-        return true;
+        if (!isActivated)
+        {
+            isActivated = true;
+        }
     }
 }
