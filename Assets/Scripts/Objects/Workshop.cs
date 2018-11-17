@@ -2,10 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Workshop : ObjectManager
+public class Workshop : MonoBehaviour
 {
     [SerializeField]
     Sprite workshopSprite;
+
+    int nbWood;
 
     private SpriteRenderer spriteRenderer;
 
@@ -22,8 +24,8 @@ public class Workshop : ObjectManager
     {
     }
 
-    public override bool activate()
+    public void activate()
     {
-        return true;
+        
     }
 }
