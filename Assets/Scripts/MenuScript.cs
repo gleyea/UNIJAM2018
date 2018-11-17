@@ -10,7 +10,7 @@ public class MenuScript : MonoBehaviour
     {
         // Sur le clic, on démarre le premier niveau
         // "MainScene" est le nom de la première scène que nous avons créés.
-        SceneManager.LoadScene("MainScene");
+        SceneManager.LoadScene("GameScene_Aymeric");
 
     }
 
