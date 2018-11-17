@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class Workshop : ObjectManager
 {
-    [SerializeField]
-    Sprite workshopSprite;
     
 
     int nbWood;
@@ -36,9 +34,6 @@ public class Workshop : ObjectManager
     void Start()
     {
         nbWood = 0;
-        spriteRenderer = GetComponent<SpriteRenderer>();
-        if (spriteRenderer.sprite == null)
-            spriteRenderer.sprite = workshopSprite;
         spriteRenderer = GetComponent<SpriteRenderer>();
         if (spriteRenderer.sprite == null)
             spriteRenderer.sprite = atelier0;
