@@ -5,10 +5,14 @@ using UnityEngine;
 public class Trees : ObjectManager {
 
     [SerializeField]
-    int age;
+    int initAge=0;
 
     int startDate;
 
+    int age;
+
+    [SerializeField]
+    Sprite tree0;
 
     [SerializeField]
     Sprite tree1;
@@ -16,27 +20,49 @@ public class Trees : ObjectManager {
     [SerializeField]
     Sprite tree2;
 
+    [SerializeField]
+    Sprite tree3;
+
     private SpriteRenderer spriteRenderer;
 
+    TimeStream timeStream;
 
-    
     // Use this for initialization
     void  Start () {
+
+        timeStream = TimeStream.Instance;
+        startDate= timeStream.getTime();
+        age = initAge;
+        
         spriteRenderer = GetComponent<SpriteRenderer>(); 
         if (spriteRenderer.sprite == null)
-            if (age == 1)
+            if (age == 0)
             {
+                spriteRenderer.sprite = tree0;
+            }
+            else if (age==1) {
                 spriteRenderer.sprite = tree1;
             }
-            else
+            else if (age==2)
             {
                 spriteRenderer.sprite = tree2;
+            }
+             else
+            {
+                spriteRenderer.sprite = tree3;
             }
     }
 	
 	// Update is called once per frame
 	void Update () {
-		if (age == 1 & spriteRenderer.sprite != tree1)
+
+        age = timeStream.getTime() + initAge - startDate;
+
+    	if (age == 0 & spriteRenderer.sprite != tree0)
+        {
+            spriteRenderer.sprite = tree0;
+        }
+        else if (age == 1 & spriteRenderer.sprite != tree1)
         {
             spriteRenderer.sprite = tree1;
         }
@@ -44,17 +70,22 @@ public class Trees : ObjectManager {
         {
             spriteRenderer.sprite = tree2;
         }
-        if (age == 5)
+        else if (age == 3 & spriteRenderer.sprite != tree3)
+        {
+            spriteRenderer.sprite = tree3;
+        }
+        if (age >= 4)
         {
             Destroy(gameObject);
         }
+        Debug.Log(age);
     }
 
     public override bool activate()
     {
-        if (age == 3)
+        if (age == 2)
         {
-            age = 5;
+            age = 4;
             return true;
         }
         return false;
