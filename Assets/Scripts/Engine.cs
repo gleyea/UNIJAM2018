@@ -72,9 +72,37 @@ public class Engine : MonoBehaviour {
             this.minPositionY = value;
         }
     }
+
+
+    TimeStream timeStream;
+
+    public AudioSource audioData;
+    public AudioClip audio1;
+    public AudioClip audio2;
+    int date = 0;
+
     public void Move(Vector3 nextPosition)
     {
+        timeStream = TimeStream.Instance;
+        date = timeStream.getTime();
         Position += nextPosition * maxSpeed * Time.deltaTime;
+        if (nextPosition.x != 0 || nextPosition.y != 0)
+        {
+           if (!audioData.isPlaying)
+            {
+                  if (date <= 1)
+                  {
+                      audioData.PlayOneShot(audio1, 1);
+                  }
+                  else 
+                 audioData.PlayOneShot(audio2, 1);
+               // audioData.Play();
+            }
+        }
+        else
+        {
+            audioData.Pause();
+        }
     }
 
 	// Use this for initialization

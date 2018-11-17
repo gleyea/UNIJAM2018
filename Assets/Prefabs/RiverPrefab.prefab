@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 60296446207506302}
   - component: {fileID: 95995967440831836}
   m_Layer: 0
-  m_Name: riviere
+  m_Name: RiverPrefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
