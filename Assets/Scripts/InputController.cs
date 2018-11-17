@@ -5,6 +5,7 @@ using UnityEngine;
 public class InputController : MonoBehaviour {
 
     // Use this for initialization
+    public Animator animator;
     private Vector2 axis;
 
     public Vector3 Axis
@@ -31,6 +32,8 @@ public class InputController : MonoBehaviour {
         if (Input.GetAxis("Action") > 0)
         {
             GetComponent<Engine>().Action();
+
+
         }
-	}
+    }
 }

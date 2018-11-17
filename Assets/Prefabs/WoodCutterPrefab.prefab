@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 212482301384293786}
   - component: {fileID: 114865545567366968}
   m_Layer: 0
-  m_Name: WoodCutter
+  m_Name: WoodCutterPrefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
