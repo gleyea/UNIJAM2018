@@ -85,7 +85,7 @@ public class Workshop : ObjectManager
         {
             nbWood = 0;
             player.gameObject.GetComponent<Player>().HasRaft = true;
-            GameObject.Find("river").GetComponent<PolygonCollider2D>().isTrigger = true;
+            GameObject.Find("RiverPrefab").GetComponent<PolygonCollider2D>().isTrigger = true;
         }
         if (nbWood < 5 & player.gameObject.GetComponent<Player>().HasWoodLog)
         {
