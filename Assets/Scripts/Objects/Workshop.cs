@@ -6,6 +6,7 @@ public class Workshop : MonoBehaviour
 {
     [SerializeField]
     Sprite workshopSprite;
+    
 
     int nbWood;
 
@@ -14,6 +15,7 @@ public class Workshop : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        nbWood = 0;
         spriteRenderer = GetComponent<SpriteRenderer>();
         if (spriteRenderer.sprite == null)
             spriteRenderer.sprite = workshopSprite;
@@ -26,6 +28,13 @@ public class Workshop : MonoBehaviour
 
     public void activate()
     {
-        
+        if (nbWood < 6 & GetComponent<Player>().HasWoodLog)
+        {
+            nbWood++;
+        }
+        if (nbWood == 6)
+        {
+            /*construction bateau*/
+        }
     }
 }
