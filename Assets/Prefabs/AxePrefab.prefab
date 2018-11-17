@@ -150,6 +150,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   axeSprite1: {fileID: 21300000, guid: dcc8bb4dbc647c64ca6ea1bfeb5b4b39, type: 3}
   axeSprite2: {fileID: 21300000, guid: 1b5ac190079aa544ebbe0a50047dfa10, type: 3}
+  audioData: {fileID: 82764038840303752}
+  audio1: {fileID: 8300000, guid: 178cb05a69916e14892474f764692d9b, type: 3}
+  audio2: {fileID: 8300000, guid: 178cb05a69916e14892474f764692d9b, type: 3}
 --- !u!212 &212742460928573848
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -26,6 +26,7 @@ public class NatureFirstPhases : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        date = timeStream.getTime();
         if (date < 3 & !isPlaying )
         {
             audioData.Play();

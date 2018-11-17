@@ -16,11 +16,15 @@ public class Axe : ObjectManager
     
     private SpriteRenderer spriteRenderer;
 
-
+    TimeStream timeStream;
+    public AudioSource audioData;
+    public AudioClip audio1;
+    public AudioClip audio2;
 
     // Use this for initialization
     void Start()
     {
+        timeStream = TimeStream.Instance;
         isActivated = false;
         spriteRenderer = GetComponent<SpriteRenderer>();
         if (spriteRenderer.sprite == null)
@@ -40,6 +44,19 @@ public class Axe : ObjectManager
     {
         if (!isActivated)
         {
+            if (timeStream.getTime() <= 2)
+            {
+                audioData.PlayOneShot(audio1, 1);
+            }
+            else
+            {
+                /*
+                 * 
+                 * 
+                 * 
+                 * 
+                 */
+            }
             isActivated = true;
             player.gameObject.GetComponent<Player>().HasAxe = true;
             //character.GetComponent<Player>().HasAxe = true;

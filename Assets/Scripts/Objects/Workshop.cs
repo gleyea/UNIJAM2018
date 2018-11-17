@@ -30,9 +30,20 @@ public class Workshop : ObjectManager
 
     private SpriteRenderer spriteRenderer;
 
+
+
+    public AudioSource audioData;
+    public AudioClip audio1;
+    public AudioClip audio2;
+    public AudioClip audioConstruction1;
+    public AudioClip audioConstruction2;
+
+    TimeStream timeStream;
+
     // Use this for initialization
     void Start()
     {
+        timeStream = TimeStream.Instance;
         nbWood = 0;
         spriteRenderer = GetComponent<SpriteRenderer>();
         if (spriteRenderer.sprite == null)
@@ -80,6 +91,40 @@ public class Workshop : ObjectManager
         {
             nbWood++;
             player.gameObject.GetComponent<Player>().HasWoodLog = false;
+            if (nbWood == 5)
+            {
+                if (timeStream.getTime() <= 2)
+                {
+                    audioData.PlayOneShot(audioConstruction1, 1);
+                }
+                else
+                {
+                    /*
+                     * 
+                     * 
+                     * 
+                     * 
+                     */
+                }
+
+            }
+            else
+            {
+                if (timeStream.getTime() <= 2)
+                {
+                    audioData.PlayOneShot(audio1, 1);
+                }
+                else
+                {
+                    /*
+                     * 
+                     * 
+                     * 
+                     * 
+                     */
+                }
+            }
+            
         }
       
     }

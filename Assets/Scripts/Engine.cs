@@ -83,7 +83,6 @@ public class Engine : MonoBehaviour {
 
     public void Move(Vector3 nextPosition)
     {
-        timeStream = TimeStream.Instance;
         date = timeStream.getTime();
         Position += nextPosition * maxSpeed * Time.deltaTime;
         if (nextPosition.x != 0 || nextPosition.y != 0)
@@ -92,10 +91,10 @@ public class Engine : MonoBehaviour {
             {
                   if (date <= 1)
                   {
-                      audioData.PlayOneShot(audio1, 1);
+                      audioData.PlayOneShot(audio1,0.5f);
                   }
                   else 
-                 audioData.PlayOneShot(audio2, 1);
+                 audioData.PlayOneShot(audio2, 0.5f);
                // audioData.Play();
             }
         }
@@ -108,6 +107,7 @@ public class Engine : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 
+        timeStream = TimeStream.Instance;
     }
 	
     void OnTriggerEnter2D(Collider2D collider)
