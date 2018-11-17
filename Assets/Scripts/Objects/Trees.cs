@@ -81,14 +81,13 @@ public class Trees : ObjectManager {
         Debug.Log(age);
     }
 
-    public override int activate()
+    public override void activate()
     {
-        if (age == 2)
+        if (age == 2 & GetComponent<Player>().HasAxe & !GetComponent<Player>().HasWoodLog )
         {
             age = 4;
-            return 2;
+            GetComponent<Player>().HasWoodLog = true;
         }
-        return 2;
     }
 
 }

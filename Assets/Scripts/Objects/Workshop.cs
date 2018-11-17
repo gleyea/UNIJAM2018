@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Workshop : MonoBehaviour
+public class Workshop : ObjectManager
 {
     [SerializeField]
     Sprite workshopSprite;
+    
 
     int nbWood;
 
@@ -14,6 +15,7 @@ public class Workshop : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        nbWood = 0;
         spriteRenderer = GetComponent<SpriteRenderer>();
         if (spriteRenderer.sprite == null)
             spriteRenderer.sprite = workshopSprite;
@@ -24,8 +26,27 @@ public class Workshop : MonoBehaviour
     {
     }
 
-    public void activate()
+    public override void activate()
     {
-        
+        if (nbWood < 6 & GetComponent<Player>().HasWoodLog)
+        {
+            nbWood++;
+            GetComponent<Player>().HasWoodLog = false;
+        }
+        if (nbWood == 6)
+        {
+            /*
+             * 
+             * 
+             * construction bateau
+             * 
+             * 
+             * 
+             *         
+             */
+        }
     }
+
+
+
 }

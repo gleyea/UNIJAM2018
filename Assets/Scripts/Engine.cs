@@ -85,36 +85,20 @@ public class Engine : MonoBehaviour {
     void OnTriggerEnter2D(Collider2D collider)
     {
         actionReady = true;
-        actualCollider = collider;
     }
 
     void OnTriggerExit2D(Collider2D collider)
     {
         actionReady = false;
-        actualCollider = null;
     }
 
     public void Action()
     {
-        if (actionReady)
+        if (actionReady & actualCollider)
         {
-            collidedObject = actualCollider.GetComponent<ObjectManager>().activate();
+             actualCollider.GetComponent<ObjectManager>().activate();
         }
-        switch(collidedObject)
-        {
-            case 0:
-                break;
-            case 1:
-                GetComponent<Player>().HasAxe = true;
-                break;
-            case 2:
-                GetComponent<Player>().HasWoodLog = true;
-                break;
-            case 3:
-                GetComponent<Player>().HasRaft = true;
-                break;
-
-        }
+ 
     }
 	// Update is called once per frame
 	void Update () {
