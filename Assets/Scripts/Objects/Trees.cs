@@ -96,21 +96,32 @@ public class Trees : ObjectManager {
     	if (age == 0 & spriteRenderer.sprite != tree0)
         {
             spriteRenderer.sprite = tree0;
+            transform.GetChild(0).gameObject.SetActive(false);
+            Destroy(GetComponent<PolygonCollider2D>());
+            gameObject.AddComponent<PolygonCollider2D>();
         }
         else if (age == 1 & spriteRenderer.sprite != tree1)
         {
             spriteRenderer.sprite = tree1;
+            transform.GetChild(0).gameObject.SetActive(false);
+            Destroy(GetComponent<PolygonCollider2D>());
+            gameObject.AddComponent<PolygonCollider2D>();
         }
         else if (age == 2 & spriteRenderer.sprite != tree2)
         {
             transform.position = new Vector3(transform.position.x, transform.position.y + positionY, transform.position.z);
+            transform.GetChild(0).gameObject.SetActive(true);
             spriteRenderer.sprite = tree2;
+            Destroy(GetComponent<PolygonCollider2D>());
+            gameObject.AddComponent<PolygonCollider2D>();
         }
         else if (age == 3 & spriteRenderer.sprite != tree3)
         {
             transform.position = new Vector3(transform.position.x, transform.position.y - positionY, transform.position.z);
-
+            transform.GetChild(0).gameObject.SetActive(false);
             spriteRenderer.sprite = tree3;
+            Destroy(GetComponent<PolygonCollider2D>());
+            gameObject.AddComponent<PolygonCollider2D>();
         }
         if (age >= 4)
         {

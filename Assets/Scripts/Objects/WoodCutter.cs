@@ -40,13 +40,9 @@ public class WoodCutter : ObjectManager {
         {
             if (timeStream.streamedTime == 1 && nbJumpsGift == 1)
             {
-                //transform.GetChild(0).gameObject.GetComponent<Trees>().InitAge = 2;
-                //transform.GetChild(0).gameObject.GetComponent<SpriteRenderer>().sprite = transform.GetChild(0).gameObject.GetComponent<Trees>().Tree2;
                 Debug.Log(transform.GetChild(0).gameObject.GetComponent<Trees>().InitAge);
                 transform.GetChild(0).gameObject.SetActive(true);
                 Debug.Log(transform.GetChild(0).gameObject.GetComponent<Trees>().InitAge);
-                //transform.GetChild(1).gameObject.GetComponent<Trees>().InitAge = 2;
-                //transform.GetChild(0).gameObject.GetComponent<SpriteRenderer>().sprite = transform.GetChild(0).gameObject.GetComponent<Trees>().Tree2;
                 transform.GetChild(1).gameObject.SetActive(true);
                 stop = true;
             }
