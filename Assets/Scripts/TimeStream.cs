@@ -19,17 +19,23 @@ public class TimeStream : MonoBehaviour {
 
     private void Awake()
     {
-
         instance = gameObject.GetComponent<TimeStream>();
     }
     [SerializeField]
     public int streamedTime;
 
+    void Start()
+    {
+        Debug.Log("B");
+    }
     public int getTime(){
         return streamedTime;
     }
 
     public void incrTime(){
-        streamedTime += 1;
+        if (streamedTime < 3)
+        {
+            streamedTime += 1;
+        }
     }
 }

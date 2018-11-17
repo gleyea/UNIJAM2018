@@ -63,7 +63,7 @@ public class Trees : ObjectManager {
 	// Update is called once per frame
 	void Update () {
 
-        age = timeStream.getTime() + initAge - startDate;
+        age = initAge + timeStream.getTime();
 
     	if (age == 0 & spriteRenderer.sprite != tree0)
         {

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Friend : MonoBehaviour {
 
-    public Sprite Friend_0, Friend_1, Friend_2;
+    public Sprite Friend_0, Friend_1, Friend_2, Friend_3;
     TimeStream timeStream;
 
     // Use this for initialization
@@ -25,6 +25,10 @@ public class Friend : MonoBehaviour {
         else if (nbJumps == 2)
         {
             this.GetComponent<SpriteRenderer>().sprite = Friend_2;
+        }
+        else if (nbJumps == 3)
+        {
+            this.GetComponent<SpriteRenderer>().sprite = Friend_3;
         }
     }
 }

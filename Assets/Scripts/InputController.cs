@@ -7,6 +7,7 @@ public class InputController : MonoBehaviour {
     // Use this for initialization
     public Animator animator;
     private Vector2 axis;
+    TimeStream timeStream;
 
     public Vector3 Axis
     {
@@ -22,16 +23,21 @@ public class InputController : MonoBehaviour {
 
 	void Start () {
         axis = new Vector3(0, 0, 0);
-	}
-	
-	// Update is called once per frame
-	void Update () {
+        timeStream = TimeStream.Instance;
+    }
+
+    // Update is called once per frame
+    void Update () {
         axis.x = Input.GetAxis("Horizontal");
         axis.y = Input.GetAxis("Vertical");
         GetComponent<Engine>().Move(axis);
         if (Input.GetButtonDown("Action"))
         {
             GetComponent<Engine>().Action();
+        }
+        if (Input.GetButtonDown("TimeTravel"))
+        {
+            timeStream.incrTime();
         }
 
         animator.SetFloat("SpeedX", axis.x);
