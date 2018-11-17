@@ -31,6 +31,7 @@ public class InputController : MonoBehaviour {
         if (Input.GetAxis("Action") > 0)
         {
             GetComponent<Engine>().Action();
+            Debug.Log("LOL");
         }
 	}
 }

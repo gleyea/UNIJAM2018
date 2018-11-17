@@ -10,6 +10,7 @@ public class Engine : MonoBehaviour {
     private float maxPositionY;
     private float minPositionX;
     private float minPositionY;
+    private bool actionReady;
     public Vector3 Position
     {
         get
@@ -74,15 +75,25 @@ public class Engine : MonoBehaviour {
         Position += nextPosition * maxSpeed * Time.deltaTime;
     }
 
+	// Use this for initialization
+	void Start () {
+
+    }
+	
+    void OnTriggerEnter(Collider2D collider)
+    {
+        actionReady = true;
+    }
+
+    void OnTriggerExit(Collider2D collider)
+    {
+        actionReady = false;
+    }
+
     public void Action()
     {
 
     }
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
 	// Update is called once per frame
 	void Update () {
 		
