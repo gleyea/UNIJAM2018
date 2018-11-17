@@ -27,6 +27,9 @@ public class Trees : ObjectManager {
 
     TimeStream timeStream;
 
+    [SerializeField]
+    private float positionY;
+
     // Use this for initialization
     void  Start () {
 
@@ -68,25 +71,29 @@ public class Trees : ObjectManager {
         }
         else if (age == 2 & spriteRenderer.sprite != tree2)
         {
+            transform.position = new Vector3(transform.position.x, transform.position.y + positionY, transform.position.z);
             spriteRenderer.sprite = tree2;
         }
         else if (age == 3 & spriteRenderer.sprite != tree3)
         {
+            transform.position = new Vector3(transform.position.x, transform.position.y - positionY, transform.position.z);
+
             spriteRenderer.sprite = tree3;
         }
         if (age >= 4)
         {
             Destroy(gameObject);
         }
-        Debug.Log(age);
+        //Debug.Log(age);
     }
 
     public override void activate()
     {
-        if (age == 2 & GetComponent<Player>().HasAxe & !GetComponent<Player>().HasWoodLog )
+        if (age == 2 & player.gameObject.GetComponent<Player>().HasAxe & !player.gameObject.GetComponent<Player>().HasWoodLog )
         {
-            age = 4;
-            GetComponent<Player>().HasWoodLog = true;
+            initAge +=1 ;
+            player.gameObject.GetComponent<Player>().HasWoodLog = true;
+            age = 3;
         }
     }
 

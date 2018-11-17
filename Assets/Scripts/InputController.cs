@@ -28,10 +28,9 @@ public class InputController : MonoBehaviour {
         axis.x = Input.GetAxis("Horizontal");
         axis.y = Input.GetAxis("Vertical");
         GetComponent<Engine>().Move(axis);
-        if (Input.GetAxis("Action") > 0)
+        if (Input.GetButtonDown("Action"))
         {
             GetComponent<Engine>().Action();
-            Debug.Log("LOL");
         }
 	}
 }

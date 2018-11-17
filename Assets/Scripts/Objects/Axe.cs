@@ -16,6 +16,8 @@ public class Axe : ObjectManager
     
     private SpriteRenderer spriteRenderer;
 
+
+
     // Use this for initialization
     void Start()
     {
@@ -39,6 +41,8 @@ public class Axe : ObjectManager
         if (!isActivated)
         {
             isActivated = true;
+            player.gameObject.GetComponent<Player>().HasAxe = true;
+            //character.GetComponent<Player>().HasAxe = true;
         }
     }
 }

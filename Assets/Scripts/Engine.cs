@@ -85,18 +85,20 @@ public class Engine : MonoBehaviour {
     void OnTriggerEnter2D(Collider2D collider)
     {
         actionReady = true;
+        actualCollider = collider;
     }
 
     void OnTriggerExit2D(Collider2D collider)
     {
         actionReady = false;
+        actualCollider = null;
     }
 
     public void Action()
     {
         if (actionReady & actualCollider)
         {
-             actualCollider.GetComponent<ObjectManager>().activate();
+            actualCollider.GetComponent<ObjectManager>().activate();
         }
  
     }

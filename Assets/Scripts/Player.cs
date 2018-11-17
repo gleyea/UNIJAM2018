@@ -9,6 +9,26 @@ public class Player : MonoBehaviour {
     private bool hasWoodLog;
     private bool hasRaft;
     private bool onWater;
+    private static Player instance;
+
+    private Player() { }
+    public static Player Instance
+    {
+        get
+        {
+            if (instance == null)
+            {
+                Debug.LogError("instance non trouvée");
+            }
+            return instance;
+        }
+    }
+
+    private void Awake()
+    {
+
+        instance = gameObject.GetComponent<Player>();
+    }
 
     public int WoodQuantity
     {
@@ -68,11 +88,16 @@ public class Player : MonoBehaviour {
     }
     // Use this for initialization
     void Start () {
-		
-	}
+        Debug.Log("A");
+        woodQuantity = 0;
+        hasAxe = false;
+        hasWoodLog = false;
+        hasRaft = false;
+        onWater = false;
+}
 	
 	// Update is called once per frame
 	void Update () {
-		
-	}
+
+    }
 }
