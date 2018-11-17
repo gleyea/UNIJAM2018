@@ -11,9 +11,15 @@ public class River : MonoBehaviour
     private SpriteRenderer spriteRenderer;
 
 
+    TimeStream timeStream;
+    public AudioSource audioData;
+    public AudioClip audio;
+
     // Use this for initialization
     void Start()
     {
+        timeStream = TimeStream.Instance;
+
         spriteRenderer = GetComponent<SpriteRenderer>();
         if (spriteRenderer.sprite == null)
             spriteRenderer.sprite = riverSprite;
@@ -22,7 +28,10 @@ public class River : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if (!audioData.isPlaying & timeStream.getTime() <= 2)
+        {
+            audioData.PlayOneShot(audio, 1);
+        }
     }
 
     public void OnTriggerEnter2D(Collider2D collider)
@@ -51,14 +60,5 @@ public class River : MonoBehaviour
          }
     }
 
-    //public override void activate()
-    //{
-        /*
-         * 
-         * 
-         * traverser
-         * 
-         * 
-         */
-    //}
+ 
 }
