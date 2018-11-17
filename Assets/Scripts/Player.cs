@@ -17,6 +17,7 @@ public class Player : MonoBehaviour {
     public Animator animator;
     private bool onEarth;
 
+
     public bool OnEarth
     {
         get
