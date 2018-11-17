@@ -70,10 +70,10 @@ public class Workshop : ObjectManager
 
     public override void activate()
     {
-        if (nbWood < 5 & GetComponent<Player>().HasWoodLog)
+        if (nbWood < 5 & player.gameObject.GetComponent<Player>().HasWoodLog)
         {
             nbWood++;
-            GetComponent<Player>().HasWoodLog = false;
+            player.gameObject.GetComponent<Player>().HasWoodLog = false;
         }
         if (nbWood == 5)
         {
