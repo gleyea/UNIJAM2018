@@ -3,7 +3,11 @@ guid: 67c15749aa715fb40804188c3a15d04e
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - WoodCutter_0: {fileID: 21300006, guid: 1fbae1624b19e4f5498ba525149d636f, type: 3}
+  - WoodCutter_1: {fileID: 21300008, guid: 1fbae1624b19e4f5498ba525149d636f, type: 3}
+  - WoodCutter_2: {fileID: 21300010, guid: 1fbae1624b19e4f5498ba525149d636f, type: 3}
+  - WoodCutter_3: {fileID: 21300012, guid: 1fbae1624b19e4f5498ba525149d636f, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
