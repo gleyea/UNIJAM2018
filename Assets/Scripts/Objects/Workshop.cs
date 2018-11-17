@@ -99,12 +99,7 @@ public class Workshop : ObjectManager
                 }
                 else
                 {
-                    /*
-                     * 
-                     * 
-                     * 
-                     * 
-                     */
+                    audioData.PlayOneShot(audioConstruction2, 1);
                 }
 
             }
@@ -116,12 +111,7 @@ public class Workshop : ObjectManager
                 }
                 else
                 {
-                    /*
-                     * 
-                     * 
-                     * 
-                     * 
-                     */
+                    audioData.PlayOneShot(audio2, 1);
                 }
             }
             

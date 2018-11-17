@@ -79,8 +79,8 @@ public class Engine : MonoBehaviour {
     public AudioSource audioData;
     public AudioClip audioEarth1;
     public AudioClip audioEarth2;
-    /*public AudioClip audioWater1;
-    public AudioClip audioWater2;*/
+    public AudioClip audioWater1;
+    public AudioClip audioWater2;
     int date = 0;
 
     public void Move(Vector3 nextPosition)
@@ -93,12 +93,12 @@ public class Engine : MonoBehaviour {
             {
                 if (date <= 1)
                 {
-                    if (!GetComponent<Player>().OnEarth) Debug.Log("water") ;// audioData.PlayOneShot(audioWater1, 1f);
+                    if (!GetComponent<Player>().OnEarth)  audioData.PlayOneShot(audioWater1, 1f);
                     else audioData.PlayOneShot(audioEarth1, 0.5f);
                 }
                 else
                 {
-                    if (!GetComponent<Player>().OnEarth) Debug.Log("water");// audioData.PlayOneShot(audioWater2, 1f);
+                    if (!GetComponent<Player>().OnEarth)  audioData.PlayOneShot(audioWater2, 1f);
                     else audioData.PlayOneShot(audioEarth2, 0.5f);
                 }
             }
