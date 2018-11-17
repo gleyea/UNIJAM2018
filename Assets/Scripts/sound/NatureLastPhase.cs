@@ -26,10 +26,15 @@ public class NatureLastPhase : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        date = timeStream.getTime();
         if (date >= 3 & !isPlaying)
         {
             audioData.Play();
             isPlaying = true;
+        }
+        else if (date <= 2)
+        {
+            audioData.Stop();
         }
     }
 }
