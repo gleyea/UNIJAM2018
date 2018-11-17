@@ -2,15 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NewBehaviourScript : MonoBehaviour {
+public abstract class Object : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
+    // Use this for initialization
+    protected abstract void Start();
 	
 	// Update is called once per frame
-	void Update () {
-		
-	}
+	protected abstract void Update();
+
+    public abstract void activate();
+
 }
