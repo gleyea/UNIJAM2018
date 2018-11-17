@@ -5,6 +5,7 @@ using UnityEngine;
 public class InputController : MonoBehaviour {
 
     // Use this for initialization
+    public Animator animator;
     private Vector2 axis;
 
     public Vector3 Axis
@@ -32,5 +33,8 @@ public class InputController : MonoBehaviour {
         {
             GetComponent<Engine>().Action();
         }
-	}
+
+        animator.SetFloat("SpeedX", axis.x);
+        animator.SetFloat("SpeedY", axis.y);
+    }
 }

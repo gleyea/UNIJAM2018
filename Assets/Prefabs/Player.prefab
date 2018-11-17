@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 50199448606035168}
   - component: {fileID: 114340683341989948}
   - component: {fileID: 114936364933639912}
-  - component: {fileID: 114121656089640044}
+  - component: {fileID: 95932262497677706}
   m_Layer: 8
   m_Name: Player
   m_TagString: Untagged
@@ -69,8 +69,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1342279947676646}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10, y: -18, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -0.08, y: 1.5, z: 0}
+  m_LocalScale: {x: 10, y: 10, z: 10}
   m_Children:
   - {fileID: 4552533402763304}
   m_Father: {fileID: 0}
@@ -152,7 +152,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.14, y: 3.11}
+    oldSize: {x: 0.38, y: 0.8}
     newSize: {x: 0.16, y: 0.16}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -168,17 +168,24 @@ AudioListener:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1692587674691628}
   m_Enabled: 1
---- !u!114 &114121656089640044
-MonoBehaviour:
+--- !u!95 &95932262497677706
+Animator:
+  serializedVersion: 3
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1342279947676646}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: da3e5d8f22422bf4a86165f6a8b0fa3e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3991e787e88824a0487d15830c4bde18, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &114340683341989948
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -202,6 +209,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 978dd426baf15ce4583b1cc149253009, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 95932262497677706}
 --- !u!212 &212935928956400026
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -237,7 +245,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: 3d76b89ee9981412d9062bcd032b28ab, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f0c96b805a8434dfeb1ef158018a2711, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
