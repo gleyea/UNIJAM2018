@@ -26,7 +26,7 @@ public class TimeStream : MonoBehaviour {
 
     void Start()
     {
-        Debug.Log("B");
+
     }
     public int getTime(){
         return streamedTime;
