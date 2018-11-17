@@ -36,6 +36,24 @@ public class WoodCutter : ObjectManager {
 
     private void Update()
     {
+        if (timeStream.streamedTime == 0)
+        {
+            GetComponent<SpriteRenderer>().sprite = WoodCutter_0;
+
+        }
+        if (timeStream.streamedTime == 1)
+        {
+            GetComponent<SpriteRenderer>().sprite = WoodCutter_1;
+
+        }
+        if (timeStream.streamedTime == 2)
+        {
+            GetComponent<SpriteRenderer>().sprite = WoodCutter_2;
+        }
+        if (timeStream.streamedTime == 3)
+        {
+            GetComponent<SpriteRenderer>().sprite = WoodCutter_3;
+        }
         if (stop == false)
         {
             if (timeStream.streamedTime == 1 && nbJumpsGift == 1)
