@@ -32,7 +32,7 @@ public class WoodCutter : MonoBehaviour {
         nbJumps = timeStream.getTime();
         //Debug.Log(nbJumps);
 
-        if (nbWoodlog == 2 && nbJumps == 2){
+        if (nbWoodlog == 1 && nbJumps == 2){
             bonusState = true;
         }
         else{
