@@ -296,8 +296,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxSpeed: 5
   audioData: {fileID: 82577025295025644}
-  audio1: {fileID: 8300000, guid: 5fdc9b2df086ee642b06d1414bf63744, type: 3}
-  audio2: {fileID: 8300000, guid: 1998474e81b101844891c60042b78c55, type: 3}
+  audioEarth1: {fileID: 8300000, guid: 5fdc9b2df086ee642b06d1414bf63744, type: 3}
+  audioEarth2: {fileID: 8300000, guid: 1998474e81b101844891c60042b78c55, type: 3}
 --- !u!114 &114811932997113418
 MonoBehaviour:
   m_ObjectHideFlags: 1
