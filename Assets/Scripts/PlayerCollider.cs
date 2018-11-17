@@ -44,32 +44,37 @@ public class PlayerCollider : MonoBehaviour {
     //Fonction qui crée les Ray2D autout du joueur pour les collisions
     void PlayerRaycast()
     {
-        direction = GetComponent<InputController>().Axis;
+        if (GetComponent<InputController>().Axis.x > 0 )
+        {
+            direction.x = 1;
+        }
+        if (GetComponent<InputController>().Axis.x < 0)
+        {
+            direction.x = -1;
+        }
+        if (GetComponent<InputController>().Axis.y > 0)
+        {
+            direction.y = 1;
+        }
+        if (GetComponent<InputController>().Axis.y < 0)
+        {
+            direction.y = -1;
+        }
         if (direction.x != 0)
         {
-            /**
-            if (direction.x == 1)
-            {
-                positionRay.x = GetComponent<Engine>().Position.x + size.x;
-
-            }
-            else
-            {
-                positionRay.x = GetComponent<Engine>().Position.x - size.x;
-            }**/
             for (float i = -1; i < 2; i++)
             {
                 if (direction.x == 1)
                 {
-                    positionRay.x = GetComponent<Engine>().Position.x + size.x/2;
+                    positionRay.x = GetComponent<Engine>().Position.x + (size.x * 0.5f);
 
                 }
                 else
                 {
-                    positionRay.x = GetComponent<Engine>().Position.x - size.x/2;
+                    positionRay.x = GetComponent<Engine>().Position.x - (size.x * 0.5f);
                 }
-                positionRay.y = GetComponent<Engine>().Position.y + ((95/100)*size.y * i);
-                hit = Physics2D.Raycast(positionRay, new Vector2(direction.x, 0), 2.0f);
+                positionRay.y = GetComponent<Engine>().Position.y + (0.70f * size.y * i);
+                hit = Physics2D.Raycast(positionRay, new Vector2(direction.x, 0), 1.0f);
                 if (hit.collider != null)
                 {
                     onHitX = true;
@@ -90,7 +95,7 @@ public class PlayerCollider : MonoBehaviour {
                     GetComponent<Engine>().MaxPositionX = 40;
                 }
                 //ray = new Ray2D(positionRay, new Vector2(direction.x, 0));
-                Debug.DrawRay(positionRay, new Vector2(direction.x * 2, 0), Color.green);
+                Debug.DrawRay(positionRay, new Vector2(direction.x, 0), Color.green);
 
             }
         }
@@ -100,19 +105,20 @@ public class PlayerCollider : MonoBehaviour {
             {
                 if (direction.y == 1)
                 {
-                    positionRay.y = GetComponent<Engine>().Position.y + size.y/2;
+                    positionRay.y = GetComponent<Engine>().Position.y + (size.y * 0.5f);
 
                 }
                 else
                 {
-                    positionRay.y = GetComponent<Engine>().Position.y - size.y/2;
+                    positionRay.y = GetComponent<Engine>().Position.y - (size.y * 0.5f);
 
                 }
-                positionRay.x = GetComponent<Engine>().Position.x + ((95 / 100) * size.y * i);
-                hit = Physics2D.Raycast(positionRay, new Vector2(0, direction.y), 2.0f);
+                positionRay.x = GetComponent<Engine>().Position.x + (0.70f * size.y * i);
+                hit = Physics2D.Raycast(positionRay, new Vector2(0, direction.y), 1.0f);
                 if (hit.collider != null)
                 {
                     onHitY = true;
+                    Debug.Log(onHitY);
                     float dist = hit.distance;
                     if (direction.y == 1)
                     {
@@ -131,7 +137,7 @@ public class PlayerCollider : MonoBehaviour {
                     GetComponent<Engine>().MinPositionY = -20;
                 }
                 //ray = new Ray2D(positionRay, new Vector2(0, direction.y));
-                Debug.DrawRay(positionRay, new Vector2(0, direction.y * 2), Color.green);
+                Debug.DrawRay(positionRay, new Vector2(0, direction.y), Color.green);
             }
         }
     }
