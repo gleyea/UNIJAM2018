@@ -24,18 +24,18 @@ public class riverAnimals : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        if (timeStream.isVFXActive() & !audioPause)
+        if ((timeStream.isVFXActive() || timeStream.IsEnd) & !audioPause)
         {
             audioData.Pause();
             audioPause = true;
         }
-        else if (audioPause & !timeStream.isVFXActive())
+        else if (audioPause & !timeStream.isVFXActive() & !timeStream.IsEnd)
         {
             audioPause = false;
             audioData.PlayOneShot(audio, 1);
             // audioData.Play();
         }
-        if (!timeStream.isVFXActive())
+        if (!timeStream.isVFXActive() & !timeStream.IsEnd)
         {
 
             if (!audioData.isPlaying & timeStream.getTime() <= 2)

@@ -45,7 +45,7 @@ public class EndGame : ObjectManager {
                     player.transform.GetChild(2).gameObject.SetActive(true);
                     timeStream.IsEnd = true;
                     credit = true;
-                    audioData.PlayOneShot(end1, 1);
+                    audioData.PlayOneShot(end1, 0.8f);
                     break;
                 case 2:
                     player.transform.GetChild(3).gameObject.SetActive(true);
