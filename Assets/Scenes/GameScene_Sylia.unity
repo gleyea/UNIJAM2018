@@ -1581,6 +1581,11 @@ Prefab:
       value: 
       objectReference: {fileID: 21300000, guid: 1cd164ccb5d1745818c044614efaea22,
         type: 3}
+    - target: {fileID: 114257047294153788, guid: a08099f851cfd3d4a84ecd2b4e61cb2d,
+        type: 2}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 785045394}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a08099f851cfd3d4a84ecd2b4e61cb2d, type: 2}
   m_IsPrefabAsset: 0
@@ -6921,6 +6926,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42b4a45b9bfad7647a007238a70f52d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioData: {fileID: 0}
+  end0: {fileID: 0}
+  end1: {fileID: 0}
+  end2: {fileID: 0}
+  end3: {fileID: 0}
 --- !u!61 &1668137081
 BoxCollider2D:
   m_ObjectHideFlags: 0
