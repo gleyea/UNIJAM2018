@@ -239,8 +239,8 @@ MonoBehaviour:
   audioData: {fileID: 82614295504477566}
   audio1: {fileID: 8300000, guid: c3037752e9683ca4f8fafa8aaf788cd6, type: 3}
   audio2: {fileID: 8300000, guid: c3037752e9683ca4f8fafa8aaf788cd6, type: 3}
-  audioConstruction1: {fileID: 0}
-  audioConstruction2: {fileID: 0}
+  audioConstruction1: {fileID: 8300000, guid: 1a900d1029a787743a61a22fa84d9693, type: 3}
+  audioConstruction2: {fileID: 8300000, guid: 9356ca3a4de372046a756cd284dc0133, type: 3}
 --- !u!212 &212005025440343440
 SpriteRenderer:
   m_ObjectHideFlags: 1
