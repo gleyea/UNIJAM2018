@@ -93,6 +93,7 @@ GameObject:
   - component: {fileID: 114865545567366968}
   - component: {fileID: 61302126441784046}
   - component: {fileID: 114711487616597312}
+  - component: {fileID: 82814719995253354}
   m_Layer: 0
   m_Name: WoodCutterPrefab
   m_TagString: Untagged
@@ -644,6 +645,101 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!82 &82814719995253354
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1659827698448226}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!114 &114197812730835830
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -671,6 +767,7 @@ MonoBehaviour:
   tree0: {fileID: 21300000, guid: de9091ab66c275d42b10b56bab55581f, type: 3}
   tree1: {fileID: 21300000, guid: 46ccc45a811e6b042b438fe48dad372c, type: 3}
   tree2: {fileID: 21300000, guid: 5d99859670eda00439d85c632fcd9f2f, type: 3}
+  tree2bis: {fileID: 0}
   tree3: {fileID: 21300000, guid: ff2202ab5f7683a49afb0bafa1cc6142, type: 3}
   positionY: 2.3
   audioData: {fileID: 82414124630895348}
@@ -691,6 +788,7 @@ MonoBehaviour:
   tree0: {fileID: 21300000, guid: de9091ab66c275d42b10b56bab55581f, type: 3}
   tree1: {fileID: 21300000, guid: 46ccc45a811e6b042b438fe48dad372c, type: 3}
   tree2: {fileID: 21300000, guid: 5d99859670eda00439d85c632fcd9f2f, type: 3}
+  tree2bis: {fileID: 0}
   tree3: {fileID: 21300000, guid: ff2202ab5f7683a49afb0bafa1cc6142, type: 3}
   positionY: 2.3
   audioData: {fileID: 82617507317274554}
@@ -732,6 +830,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nbWoodlog: 0
+  audioData: {fileID: 82814719995253354}
+  audio: {fileID: 8300000, guid: a99c0e979e2a6ce43a396c1664110b38, type: 3}
   WoodCutter_0: {fileID: 21300006, guid: 1fbae1624b19e4f5498ba525149d636f, type: 3}
   WoodCutter_1: {fileID: 21300008, guid: 1fbae1624b19e4f5498ba525149d636f, type: 3}
   WoodCutter_2: {fileID: 21300010, guid: 1fbae1624b19e4f5498ba525149d636f, type: 3}
