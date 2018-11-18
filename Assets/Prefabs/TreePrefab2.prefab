@@ -39,7 +39,6 @@ GameObject:
   - component: {fileID: 60651855136350612}
   - component: {fileID: 114453184047237992}
   - component: {fileID: 61227353794644790}
-  - component: {fileID: 114354786738398030}
   - component: {fileID: 82705018290604216}
   m_Layer: 0
   m_Name: TreePrefab2
@@ -270,18 +269,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &114354786738398030
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1602248890159632}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 485545c826fc67447a5a93e3663ac511, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  streamedTime: 0
 --- !u!114 &114453184047237992
 MonoBehaviour:
   m_ObjectHideFlags: 1
