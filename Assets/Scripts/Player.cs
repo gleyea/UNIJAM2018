@@ -149,6 +149,14 @@ public class Player : MonoBehaviour {
         {
             animator.SetBool("hasRaft", false);
         }
+        if (hasWoodLog)
+        {
+            animator.SetBool("hasBuche", true);
+        }
+        if (!hasWoodLog)
+        {
+            animator.SetBool("hasBuche", false);
+        }
         if (onEarth)
         {
             animator.SetBool("onWater", false);
