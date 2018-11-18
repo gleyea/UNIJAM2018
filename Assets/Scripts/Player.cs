@@ -141,6 +141,14 @@ public class Player : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        if (HasRaft && onEarth)
+        {
+            animator.SetBool("hasRaft", true);
+        }
+        if (!hasRaft)
+        {
+            animator.SetBool("hasRaft", false);
+        }
         if (onEarth)
         {
             animator.SetBool("onWater", false);
