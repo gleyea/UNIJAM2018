@@ -25,7 +25,7 @@ public class NatureLastPhase : MonoBehaviour
     void Update()
     {
         date = timeStream.getTime();
-        if (timeStream.isVFXActive())
+        if (timeStream.isVFXActive() || timeStream.IsEnd)
         {
             audioData.Stop();
         }

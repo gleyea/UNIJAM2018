@@ -11,6 +11,9 @@ public class WoodCutter : ObjectManager {
     int nbJumps;
     private bool stop;
 
+    public AudioSource audioData;
+    public AudioClip audio;
+
     public Sprite WoodCutter_0, WoodCutter_1, WoodCutter_2, WoodCutter_3;
     TimeStream timeStream;
 
@@ -31,6 +34,8 @@ public class WoodCutter : ObjectManager {
             canGetWoodLog = false;
             bonusState = true;
             nbJumpsGift = timeStream.streamedTime + 1;
+            audioData.PlayOneShot(audio, 1);
+            
         }
     }
 

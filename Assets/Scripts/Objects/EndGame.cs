@@ -10,8 +10,16 @@ public class EndGame : ObjectManager {
     private float maxTimer;
     private bool credit;
     TimeStream timeStream;
-	// Use this for initialization
-	void Start () {
+
+    public AudioSource audioData;
+
+    public AudioClip end0;
+    public AudioClip end1;
+    public AudioClip end2;
+    public AudioClip end3;
+
+    // Use this for initialization
+    void Start () {
         timeStream = TimeStream.Instance;
         timer = 0;
         maxTimer = 4;
@@ -31,21 +39,25 @@ public class EndGame : ObjectManager {
                     player.transform.GetChild(1).gameObject.SetActive(true);
                     timeStream.IsEnd = true;
                     credit = true;
+                    audioData.PlayOneShot(end0, 1);
                     break;
                 case 1:
                     player.transform.GetChild(2).gameObject.SetActive(true);
                     timeStream.IsEnd = true;
                     credit = true;
+                    audioData.PlayOneShot(end1, 0.8f);
                     break;
                 case 2:
                     player.transform.GetChild(3).gameObject.SetActive(true);
                     timeStream.IsEnd = true;
                     credit = true;
+                    audioData.PlayOneShot(end2, 1);
                     break;
                 case 3:
                     player.transform.GetChild(4).gameObject.SetActive(true);
                     timeStream.IsEnd = true;
                     credit = true;
+                    audioData.PlayOneShot(end3, 1);
                     break;
             }
         }
