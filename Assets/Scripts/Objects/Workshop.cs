@@ -53,6 +53,14 @@ public class Workshop : ObjectManager
     // Update is called once per frame
     void Update()
     {
+        if (player)
+        {
+            transform.GetChild(0).gameObject.SetActive(true);
+        }
+        else if(!player)
+        {
+            transform.GetChild(0).gameObject.SetActive(false);
+        }
         if (nbWood == 0 & spriteRenderer.sprite != atelier0)
         {
             spriteRenderer.sprite = atelier0;
