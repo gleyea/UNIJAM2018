@@ -29,12 +29,27 @@ public class TimeStream : MonoBehaviour {
     float startTime ;
     bool isVFX ;
     float VFXDuration;
+    bool isEnd;
+
+    public bool IsEnd
+    {
+        get
+        {
+            return this.isEnd;
+        }
+        set
+        {
+            this.isEnd = value;
+        }
+    }
 
     void Start()
     {
+        Debug.Log("A");
         startTime = 0;
         VFXDuration = 20;
         timer = 0;
+        isEnd = false;
 }
     public int getTime(){
         return streamedTime;
@@ -57,6 +72,7 @@ public class TimeStream : MonoBehaviour {
 
     private void Update()
     {
+        //Debug.Log(isVFX);
         if (isVFX && timer >= VFXDuration)
         {
             //Debug.Log(isVFX);

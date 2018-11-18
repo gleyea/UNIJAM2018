@@ -6,6 +6,7 @@ public class Friend : ObjectManager {
 
     public Sprite Friend_0, Friend_1, Friend_2, Friend_3;
     TimeStream timeStream;
+    private int end;
 
     // Use this for initialization
     void Start () {
@@ -47,7 +48,27 @@ public class Friend : ObjectManager {
         }
     }
     public override void activate()
-    {
-
-     }
+    {/**
+        Debug.Log("BONJOUR");
+        if (player)
+        {
+            Debug.Log(player);
+            end = timeStream.streamedTime;
+            switch (end)
+            {
+                case 0:
+                    player.transform.GetChild(1).gameObject.SetActive(true);
+                    break;
+                case 1:
+                    player.transform.GetChild(2).gameObject.SetActive(true);
+                    break;
+                case 2:
+                    player.transform.GetChild(3).gameObject.SetActive(true);
+                    break;
+                case 3:
+                    player.transform.GetChild(4).gameObject.SetActive(true);
+                    break;
+            }
+        }**/
+    }
 }
