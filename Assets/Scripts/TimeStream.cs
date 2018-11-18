@@ -33,7 +33,7 @@ public class TimeStream : MonoBehaviour {
     {
         float startTime = 0;
         bool isVFX = false;
-        VFXDuration = 3;
+        VFXDuration = 1;
 }
     public int getTime(){
         return streamedTime;
