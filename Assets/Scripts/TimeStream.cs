@@ -6,6 +6,7 @@ public class TimeStream : MonoBehaviour {
     
 
     private static TimeStream instance;
+    private int timer;
 
     private TimeStream(){}
 
@@ -31,9 +32,9 @@ public class TimeStream : MonoBehaviour {
 
     void Start()
     {
-        float startTime = 0;
-        bool isVFX = false;
-        VFXDuration = 1;
+        startTime = 0;
+        VFXDuration = 20;
+        timer = 0;
 }
     public int getTime(){
         return streamedTime;
@@ -50,20 +51,23 @@ public class TimeStream : MonoBehaviour {
             streamedTime += 1;
             isVFX = true;
             startTime = Time.time;
+            timer = 0;
         }
     }
 
     private void Update()
     {
-        if (isVFX & Time.time - startTime >= VFXDuration)
+        if (isVFX && timer >= VFXDuration)
         {
+            //Debug.Log(isVFX);
             isVFX = false;
             startTime =0;
+            timer = 0;
         }
-        else if (isVFX & Time.time - startTime < VFXDuration)
+        else if (isVFX && timer < VFXDuration)
         {
             /**animation**/
-            Debug.Log(Time.time - startTime);
         }
+        timer++;
     }
 }

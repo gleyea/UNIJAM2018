@@ -28,6 +28,7 @@ public class InputController : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
+        Debug.Log(timeStream.isVFXActive());
         if (!timeStream.isVFXActive())
         {
             axis.x = Input.GetAxis("Horizontal");
