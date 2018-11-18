@@ -5,7 +5,7 @@ Sprite:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Bottom_buche_0
+  m_Name: Idle_buche
   m_Rect:
     serializedVersion: 2
     x: 3
