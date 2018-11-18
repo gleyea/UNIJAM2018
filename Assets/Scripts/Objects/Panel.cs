@@ -13,8 +13,21 @@ public class Panel : ObjectManager {
 
     public override void activate()
     {
+        if (player && transform.GetChild(1).gameObject.activeSelf == false)
+        {
+            transform.GetChild(1).gameObject.SetActive(true);
 
-     }
+        }
+        else if(player && transform.GetChild(1).gameObject.activeSelf == true) 
+        {
+            transform.GetChild(1).gameObject.SetActive(false);
+
+        }
+        else if(!player)
+        {
+            transform.GetChild(1).gameObject.SetActive(false);
+        }
+    }
     // Update is called once per frame
     void Update () {
 		if (player)
@@ -24,6 +37,8 @@ public class Panel : ObjectManager {
         else if (!player)
         {
             transform.GetChild(0).gameObject.SetActive(false);
+            transform.GetChild(1).gameObject.SetActive(false);
+
         }
     }
 }
