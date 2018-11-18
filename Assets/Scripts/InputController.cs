@@ -41,7 +41,10 @@ public class InputController : MonoBehaviour {
             {
                 timeStream.incrTime();
             }
-
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                Application.Quit();
+            }
             animator.SetFloat("SpeedX", axis.x);
             animator.SetFloat("SpeedY", axis.y);
         }
