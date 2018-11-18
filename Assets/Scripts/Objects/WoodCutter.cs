@@ -36,6 +36,14 @@ public class WoodCutter : ObjectManager {
 
     private void Update()
     {
+        if (player && canGetWoodLog == true)
+        {
+            transform.GetChild(2).gameObject.SetActive(true);
+        }
+        if (!player)
+        {
+            transform.GetChild(2).gameObject.SetActive(false);
+        }
         if (timeStream.streamedTime == 0)
         {
             GetComponent<SpriteRenderer>().sprite = WoodCutter_0;
