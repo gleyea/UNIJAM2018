@@ -134,6 +134,7 @@ public class Player : MonoBehaviour {
         hasAxe = false;
         hasWoodLog = false;
         hasRaft = false;
+        animator.SetBool("hasRaft", false);
         onWater = false;
         onEarth = true;
 }
