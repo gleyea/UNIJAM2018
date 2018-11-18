@@ -19,7 +19,7 @@ public class WoodCutter : ObjectManager {
         timeStream = TimeStream.Instance;
         canGetWoodLog = true;
         bonusState = false;
-        nbJumpsGift = 3;
+        nbJumpsGift = 4;
         stop = false;
     }
 

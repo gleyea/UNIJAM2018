@@ -5,7 +5,7 @@ Sprite:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Bottom_buche_0
+  m_Name: Idle_buche
   m_Rect:
     serializedVersion: 2
     x: 3
@@ -21,7 +21,7 @@ Sprite:
   m_AtlasName: 
   m_PackingTag: 
   m_RenderDataKey:
-    264f97734733d41c6b456a9f5048e2a4: 21300000
+    643f28d26e3cf4c84b86387378cf4796: 21300000
   m_AtlasTags: []
   m_SpriteAtlas: {fileID: 0}
   m_RD:
