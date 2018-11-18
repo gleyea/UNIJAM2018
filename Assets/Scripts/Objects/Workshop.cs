@@ -4,12 +4,7 @@ using UnityEngine;
 
 public class Workshop : ObjectManager
 {
-    
-
     int nbWood;
-    public Animator animator;
-
-
 
     [SerializeField]
     Sprite atelier0;
@@ -30,7 +25,6 @@ public class Workshop : ObjectManager
     Sprite atelier5;
 
     private SpriteRenderer spriteRenderer;
-
 
 
     public AudioSource audioData;
@@ -94,7 +88,6 @@ public class Workshop : ObjectManager
         {
             nbWood = 0;
             player.gameObject.GetComponent<Player>().HasRaft = true;
-            animator.SetBool("hasRaft", true);
             GameObject.Find("RiverPrefab").GetComponent<PolygonCollider2D>().isTrigger = true;
         }
         if (nbWood < 5 & player.gameObject.GetComponent<Player>().HasWoodLog)
