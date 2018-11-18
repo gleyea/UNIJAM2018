@@ -71,7 +71,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1866312345746906}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -15.4, y: -35.4, z: 0}
+  m_LocalPosition: {x: 32.12, y: -39.72, z: 0}
   m_LocalScale: {x: 5, y: 5, z: 5}
   m_Children:
   - {fileID: 4510870010464704}
@@ -294,10 +294,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d3751a1a8d34a543bc4ec640689ce76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSpeed: 5
+  maxSpeed: 10
   audioData: {fileID: 82577025295025644}
   audioEarth1: {fileID: 8300000, guid: 5fdc9b2df086ee642b06d1414bf63744, type: 3}
   audioEarth2: {fileID: 8300000, guid: 1998474e81b101844891c60042b78c55, type: 3}
+  audioWater1: {fileID: 0}
+  audioWater2: {fileID: 0}
 --- !u!114 &114811932997113418
 MonoBehaviour:
   m_ObjectHideFlags: 1
