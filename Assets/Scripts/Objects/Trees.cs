@@ -21,6 +21,9 @@ public class Trees : ObjectManager {
     Sprite tree2;
 
     [SerializeField]
+    Sprite tree2bis;
+
+    [SerializeField]
     Sprite tree3;
 
     private SpriteRenderer spriteRenderer;
@@ -34,6 +37,8 @@ public class Trees : ObjectManager {
     public AudioClip audio1;
     public AudioClip audio2;
 
+
+    int nbCoups ;
 
     public int InitAge
     {
@@ -64,6 +69,7 @@ public class Trees : ObjectManager {
         timeStream = TimeStream.Instance;
         startDate= timeStream.getTime();
         age = initAge;
+        nbCoups = 0;
         
         spriteRenderer = GetComponent<SpriteRenderer>();
         if (spriteRenderer.sprite == null)
@@ -107,13 +113,27 @@ public class Trees : ObjectManager {
             Destroy(GetComponent<PolygonCollider2D>());
             gameObject.AddComponent<PolygonCollider2D>();
         }
-        else if (age == 2 & spriteRenderer.sprite != tree2)
+        else if (age == 2)
         {
-            transform.position = new Vector3(transform.position.x, transform.position.y + positionY, transform.position.z);
-            transform.GetChild(0).gameObject.SetActive(true);
-            spriteRenderer.sprite = tree2;
-            Destroy(GetComponent<PolygonCollider2D>());
-            gameObject.AddComponent<PolygonCollider2D>();
+            if (spriteRenderer.sprite != tree2 & spriteRenderer.sprite != tree2bis)
+            {
+                transform.position = new Vector3(transform.position.x, transform.position.y + positionY, transform.position.z);
+                transform.GetChild(0).gameObject.SetActive(true);
+            }
+            if (nbCoups == 0 & spriteRenderer.sprite != tree2)
+            {
+                spriteRenderer.sprite = tree2;
+
+                Debug.Log(nbCoups);
+            }
+            else if (nbCoups!=0 & spriteRenderer.sprite != tree2bis)
+            {
+                spriteRenderer.sprite = tree2bis;
+                spriteRenderer.transform.localScale -= new Vector3(0f, 0.02f, 0);
+                transform.GetChild(0).transform.localScale+=new Vector3(0.1f, 0.1f, 0);
+                Destroy(GetComponent<PolygonCollider2D>());
+                gameObject.AddComponent<PolygonCollider2D>();
+            }
         }
         else if (age == 3 & spriteRenderer.sprite != tree3)
         {
@@ -127,7 +147,6 @@ public class Trees : ObjectManager {
         {
             Destroy(gameObject);
         }
-        //Debug.Log(age);
     }
 
     public override void activate()
@@ -142,9 +161,17 @@ public class Trees : ObjectManager {
             {
                 audioData.PlayOneShot(audio2, 1);
             }
-            initAge +=1 ;
-            player.gameObject.GetComponent<Player>().HasWoodLog = true;
-            age = 3;
+            if (nbCoups == 0)
+            {
+                nbCoups++;
+                gameObject.transform.localScale-=new Vector3(0.9f,0.8f,0);
+            }
+            else
+            {
+                initAge += 1;
+                player.gameObject.GetComponent<Player>().HasWoodLog = true;
+                age = 3;
+            }
         }
     }
 

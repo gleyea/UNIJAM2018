@@ -297,6 +297,7 @@ MonoBehaviour:
   tree0: {fileID: 21300000, guid: de9091ab66c275d42b10b56bab55581f, type: 3}
   tree1: {fileID: 21300000, guid: 46ccc45a811e6b042b438fe48dad372c, type: 3}
   tree2: {fileID: 21300000, guid: 5d99859670eda00439d85c632fcd9f2f, type: 3}
+  tree2bis: {fileID: 21300000, guid: f254071b7b458b04ea4a411620649e24, type: 3}
   tree3: {fileID: 21300000, guid: ff2202ab5f7683a49afb0bafa1cc6142, type: 3}
   positionY: 2.3
   audioData: {fileID: 82705018290604216}
