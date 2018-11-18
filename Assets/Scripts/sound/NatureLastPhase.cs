@@ -25,13 +25,20 @@ public class NatureLastPhase : MonoBehaviour
     void Update()
     {
         date = timeStream.getTime();
-        if (date >= 3 & !audioData.isPlaying)
-        {
-            audioData.Play();
-        }
-        else if (date <= 2)
+        if (timeStream.isVFXActive())
         {
             audioData.Stop();
+        }
+        else
+        {
+            if (date >= 3 & !audioData.isPlaying)
+            {
+                audioData.Play();
+            }
+            else if (date <= 2)
+            {
+                audioData.Stop();
+            }
         }
     }
 }
