@@ -94,12 +94,12 @@ public class Engine : MonoBehaviour {
                 if (date <= 1)
                 {
                     if (!GetComponent<Player>().OnEarth)  audioData.PlayOneShot(audioWater1, 1f);
-                    else audioData.PlayOneShot(audioEarth1, 0.5f);
+                    else audioData.PlayOneShot(audioEarth1, 0.2f);
                 }
                 else
                 {
                     if (!GetComponent<Player>().OnEarth)  audioData.PlayOneShot(audioWater2, 1f);
-                    else audioData.PlayOneShot(audioEarth2, 0.5f);
+                    else audioData.PlayOneShot(audioEarth2, 0.2f);
                 }
             }
         }

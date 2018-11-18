@@ -12,8 +12,7 @@ public class River : MonoBehaviour
 
 
     TimeStream timeStream;
-    public AudioSource audioData;
-    public AudioClip audio;
+    
 
     // Use this for initialization
     void Start()
@@ -28,10 +27,7 @@ public class River : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!audioData.isPlaying & timeStream.getTime() <= 2)
-        {
-            audioData.PlayOneShot(audio, 1);
-        }
+        
     }
 
     public void OnTriggerEnter2D(Collider2D collider)
