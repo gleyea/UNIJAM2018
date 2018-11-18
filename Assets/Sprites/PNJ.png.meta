@@ -94,12 +94,12 @@ TextureImporter:
       name: Friend_0
       rect:
         serializedVersion: 2
-        x: 9
-        y: 99
+        x: 15
+        y: 95
         width: 31
         height: 76
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -114,12 +114,12 @@ TextureImporter:
       name: Friend_1
       rect:
         serializedVersion: 2
-        x: 43
-        y: 100
+        x: 50
+        y: 96
         width: 31
         height: 74
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -134,12 +134,12 @@ TextureImporter:
       name: Friend_2
       rect:
         serializedVersion: 2
-        x: 76
-        y: 99
+        x: 83
+        y: 95
         width: 28
         height: 75
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -154,12 +154,12 @@ TextureImporter:
       name: WoodCutter_0
       rect:
         serializedVersion: 2
-        x: 9
-        y: 15
+        x: 14
+        y: 10
         width: 32
         height: 79
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -174,12 +174,12 @@ TextureImporter:
       name: WoodCutter_1
       rect:
         serializedVersion: 2
-        x: 46
-        y: 14
+        x: 53
+        y: 11
         width: 30
         height: 79
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -194,12 +194,12 @@ TextureImporter:
       name: WoodCutter_2
       rect:
         serializedVersion: 2
-        x: 79
-        y: 14
+        x: 86
+        y: 12
         width: 33
         height: 78
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -214,12 +214,12 @@ TextureImporter:
       name: WoodCutter_3
       rect:
         serializedVersion: 2
-        x: 112
-        y: 14
+        x: 120
+        y: 12
         width: 31
         height: 78
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
