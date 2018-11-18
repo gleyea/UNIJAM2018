@@ -40,7 +40,7 @@ public class WoodCutter : ObjectManager {
         {
             transform.GetChild(2).gameObject.SetActive(true);
         }
-        if (!player)
+        if (!player && transform.GetChild(2).gameObject)
         {
             transform.GetChild(2).gameObject.SetActive(false);
         }
@@ -66,27 +66,27 @@ public class WoodCutter : ObjectManager {
         {
             if (timeStream.streamedTime == 1 && nbJumpsGift == 1)
             {
-                transform.GetChild(0).gameObject.GetComponent<Trees>().InitAge = 2;
+                transform.GetChild(0).gameObject.GetComponent<Trees>().InitAge = 1;
                 Debug.Log(transform.GetChild(0).gameObject.GetComponent<Trees>().InitAge);
                 transform.GetChild(0).gameObject.SetActive(true);
-                transform.GetChild(0).gameObject.GetComponent<Trees>().InitAge = 2;
+                transform.GetChild(1).gameObject.GetComponent<Trees>().InitAge = 1;
                 Debug.Log(transform.GetChild(0).gameObject.GetComponent<Trees>().InitAge);
                 transform.GetChild(1).gameObject.SetActive(true);
                 stop = true;
             }
             else if (timeStream.streamedTime == 2 && nbJumpsGift == 2)
             {
-                transform.GetChild(0).gameObject.GetComponent<Trees>().InitAge = 2;
+                transform.GetChild(0).gameObject.GetComponent<Trees>().InitAge = 0;
                 transform.GetChild(0).gameObject.SetActive(true);
-                transform.GetChild(1).gameObject.GetComponent<Trees>().InitAge = 2;
+                transform.GetChild(1).gameObject.GetComponent<Trees>().InitAge = 0;
                 transform.GetChild(1).gameObject.SetActive(true);
                 stop = true;
             }
             else if (timeStream.streamedTime == 3 && nbJumpsGift == 3)
             {
-                transform.GetChild(0).gameObject.GetComponent<Trees>().InitAge = 2;
+                transform.GetChild(0).gameObject.GetComponent<Trees>().InitAge = -1;
                 transform.GetChild(0).gameObject.SetActive(true);
-                transform.GetChild(1).gameObject.GetComponent<Trees>().InitAge = 2;
+                transform.GetChild(1).gameObject.GetComponent<Trees>().InitAge = -1;
                 transform.GetChild(1).gameObject.SetActive(true);
                 stop = true;
             }

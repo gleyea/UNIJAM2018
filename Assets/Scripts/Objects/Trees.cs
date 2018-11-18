@@ -103,6 +103,7 @@ public class Trees : ObjectManager {
         {
             spriteRenderer.sprite = tree0;
             transform.GetChild(0).gameObject.SetActive(false);
+            transform.GetChild(1).gameObject.SetActive(false);
             Destroy(GetComponent<PolygonCollider2D>());
             gameObject.AddComponent<PolygonCollider2D>();
         }
@@ -110,6 +111,7 @@ public class Trees : ObjectManager {
         {
             spriteRenderer.sprite = tree1;
             transform.GetChild(0).gameObject.SetActive(false);
+            transform.GetChild(1).gameObject.SetActive(false);
             Destroy(GetComponent<PolygonCollider2D>());
             gameObject.AddComponent<PolygonCollider2D>();
         }
@@ -119,6 +121,7 @@ public class Trees : ObjectManager {
             {
                 transform.position = new Vector3(transform.position.x, transform.position.y + positionY, transform.position.z);
                 transform.GetChild(0).gameObject.SetActive(true);
+                transform.GetChild(1).gameObject.SetActive(true);
             }
             if (nbCoups == 0 & spriteRenderer.sprite != tree2)
             {
@@ -130,7 +133,7 @@ public class Trees : ObjectManager {
             {
                 spriteRenderer.sprite = tree2bis;
                 spriteRenderer.transform.localScale -= new Vector3(0f, 0.02f, 0);
-                transform.GetChild(0).transform.localScale+=new Vector3(0.1f, 0.1f, 0);
+                transform.GetChild(0).transform.localScale += new Vector3(0.1f, 0.1f, 0);
                 Destroy(GetComponent<PolygonCollider2D>());
                 gameObject.AddComponent<PolygonCollider2D>();
             }
@@ -139,6 +142,7 @@ public class Trees : ObjectManager {
         {
             transform.position = new Vector3(transform.position.x, transform.position.y - positionY, transform.position.z);
             transform.GetChild(0).gameObject.SetActive(false);
+            transform.GetChild(1).gameObject.SetActive(false);
             spriteRenderer.sprite = tree3;
             Destroy(GetComponent<PolygonCollider2D>());
             gameObject.AddComponent<PolygonCollider2D>();
@@ -164,7 +168,16 @@ public class Trees : ObjectManager {
             if (nbCoups == 0)
             {
                 nbCoups++;
-                gameObject.transform.localScale-=new Vector3(0.9f,0.8f,0);
+                if (gameObject.transform.parent.gameObject.name != "WoodCutterPrefab")
+                {
+                    gameObject.transform.localScale -= new Vector3(0.9f, 0.8f, 0);
+
+                }
+                else if (gameObject.transform.parent.gameObject.name == "WoodCutterPrefab")
+                {
+                    gameObject.transform.localScale -= new Vector3(0.1f, 0.1f, 0);
+                    Debug.Log("Fait chier");
+                }
             }
             else
             {
