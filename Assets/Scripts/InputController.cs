@@ -28,19 +28,22 @@ public class InputController : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
-        axis.x = Input.GetAxis("Horizontal");
-        axis.y = Input.GetAxis("Vertical");
-        GetComponent<Engine>().Move(axis);
-        if (Input.GetButtonDown("Action"))
+        if (!timeStream.isVFXActive())
         {
-            GetComponent<Engine>().Action();
-        }
-        if (Input.GetButtonDown("TimeTravel"))
-        {
-            timeStream.incrTime();
-        }
+            axis.x = Input.GetAxis("Horizontal");
+            axis.y = Input.GetAxis("Vertical");
+            GetComponent<Engine>().Move(axis);
+            if (Input.GetButtonDown("Action"))
+            {
+                GetComponent<Engine>().Action();
+            }
+            if (Input.GetButtonDown("TimeTravel"))
+            {
+                timeStream.incrTime();
+            }
 
-        animator.SetFloat("SpeedX", axis.x);
-        animator.SetFloat("SpeedY", axis.y);
+            animator.SetFloat("SpeedX", axis.x);
+            animator.SetFloat("SpeedY", axis.y);
+        }
     }
 }
